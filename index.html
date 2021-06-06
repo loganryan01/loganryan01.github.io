@@ -49,6 +49,47 @@ body {
   color: black; /* Black text color */
 }
 
+/* Ensure proper sizing */
+* { 
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px /* Some padding */
+}
+
+/* Main Column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%
+  }
+}
+
 </style>
 </head>
 <body>
@@ -63,6 +104,11 @@ body {
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#" class="right">Link</a>
+</div>
+
+<div class="row">
+  <div class="side">...</div>
+  <div class="main">...</div>
 </div>
 
 </body>
