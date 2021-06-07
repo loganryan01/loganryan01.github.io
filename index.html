@@ -40,13 +40,19 @@ body {
 
 /* Right-aligned link */
 .navbar a.right {
-  float: right /* Float a link to the right */
+  float: right; /* Float a link to the right */
 }
 
 /* Change color on hover/mouse-over */
 .navbar a:hover {
   background-color: #ddd; /* Grey background color */
   color: black; /* Black text color */
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
 }
 
 /* Ensure proper sizing */
@@ -65,7 +71,7 @@ body {
 .side {
   flex: 30%; /* Set the width of the sidebar */
   background-color: #f1f1f1; /* Grey background color */
-  padding: 20px /* Some padding */
+  padding: 20px; /* Some padding */
 }
 
 /* Main Column */
@@ -86,8 +92,14 @@ body {
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
-    width: 100%
+    width: 100%;
   }
+}
+
+.footer {
+  padding: 20px; /* Some padding */
+  text-align: center; /* Center text */
+  background: #ddd; /* Grey background */
 }
 
 </style>
@@ -95,20 +107,38 @@ body {
 <body>
 
 <div class="header">
-  <h1>My Website</h1>
-  <p>A website created by me.</p>
+  <h1>Logan Ryan</h1>
+  <p>A website about me.</p>
 </div>
 
 <div class="navbar">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
+  <a href="#" class="active">Home</a>
+  <a href="#">About</a>
+  <a href="#">Projects</a>
+  <a href="#" class="right">Contact</a>
 </div>
 
 <div class="row">
-  <div class="side">...</div>
-  <div class="main">...</div>
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    /* Image of me to be displayed here */
+    <p>My name is Logan Ryan and I am a 2nd Year Game Programming student at the Academy of Interactive Entertainment. I have advanced knowledge on C# and C++ coding languages, and knowledge on using the Unity engine.</p>
+  </div>
+  <div class="main">
+    <h2>The Good Robot</h2>
+    <h5>First 3D Cross-Platform Game Created</h5>
+    /* Image of the game to be displayed here */
+    <p>This is a 3D platform game that can be played on PC, Web and Android devices. The goal of this game is to collect coins and reach the end of the room while avoiding obstacles and enemies.</p>
+    <h2>Tea Run</h2>
+    <h5>First Group Production</h5>
+    /* Image of the game to be displayed here */
+    <p>This is a 2.5D platform game that can be played on PC. The goal of this game is to earn as many points as possible within the time limit by collecting tea bags and deliver them to customers while avoiding obstacles.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
 </div>
 
 </body>
