@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
-<title>Projects</title>
+<html lang="en">
+<head>
+<title>Logan Ryan (Game Programmer)</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -55,8 +56,43 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   color: white;
 }
 
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 </style>
-<body class="w3-light-grey">
+</head>
+<body>
 
 <div class="header">
   <h1>Logan Ryan</h1>
@@ -66,48 +102,20 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="navbar">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="#" class="active">Projects</a>
-  <a href="contact.html" class="right">Contact</a>
+  <a href="projects.html">Projects</a>
+  <a href="#" class="right active">Contact</a>
 </div>
 
-<div class="w3-row-padding"> 
-
-<div class="w3-third">
-<hr>
-<div class="w3-card">
-  <img src="InGameShot.png" alt="The Good Robot" style="width:100%">
-  <div class="w3-container">
-  <p>
-  <a href="https://github.com/loganryan01/AIECPDAssignment">The Good Robot</a>
-  </p>
-  </div>
-</div>
-</div>
-
-<div class="w3-third">
-<hr>
-<div class="w3-card-4">
-  <img src="TeaRun.png" alt="Tea Run" style="width:100%">
-  <div class="w3-container">
-  <p>
-  <a href="https://github.com/AIESydneyStudents/Caffeinated">Tea Run</a>
-  </p>
-  </div>
-</div>
-</div>
-
-<div class="w3-third">
-<hr>
-<div class="w3-card-4">
-  <img src="DPG.gif" alt="PDG" style="width:100%">
-  <div class="w3-container">
-  <p>
-  <a href="https://github.com/loganryan01/AIEComplexGameSystemAssignment">Procedural Dungeon Generator</a>
-  </p>
-  </div>
-</div>
-
-</div>
+<div class="box">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+    <input type="submit" value="Submit">
+  </form>
 </div>
 
 <footer class="w3-container w3-teal w3-center w3-margin-top">
@@ -124,6 +132,5 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   </a>
   <p>Powered by <a href="https://pages.github.com/" target="_blank">GitHub.io</a></p>
 </footer>
-
 
 </body>
